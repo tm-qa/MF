@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/hemant/Downloads/MintproSanityAutomation/src/test/java/com/qa/turtlemint/testcases">
+        <method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                    <![CDATA[
+                    String myTestGroup = System.getProperty("groupName");
+                    groups.containsKey(myTestGroup);
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+
+                <groups>
+                    <run>
+                        <include name="${groupName}"></include>
+                    </run>
+                </groups>
+        <classes>
+            <class name="B2B_Test.SIP_Test"></class>
+            <class name="B2B_Test.TC_127_147"></class>
+            <class name="B2B_Test.Testcase_148_to_168"></class>
+            <class name="B2B_Test.MF_21_42_TestCase_FlowTest"></class>
+            <class name="B2B_Test.TC_01_TO_21_test"></class>
+
+            <class name="B2B_Test.MF43to63_85to26_169to89_Test"></class>
+        </classes>
+
+    </test>
+</suite>
